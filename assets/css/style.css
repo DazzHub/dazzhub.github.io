@@ -1,0 +1,290 @@
+/* QUITO EL MARGIN Y PADDING A TODO LO QUE CONTIENE LA WEB, PARA QUE PUEDA MANEJARLO A MI GUSTO */
+* {
+    box-sizing: border-box;
+
+    padding: 0;
+    margin: 0;
+}
+
+html, body {
+    font-family: Consolas, monaco, monospace;
+    height: 100%;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+    background: transparent;
+}
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(13deg, #006964 14%,#00A19A 64%);
+}
+::-webkit-scrollbar-thumb:hover{
+    background: linear-gradient(13deg, #006964 14%,#00a19a 64%);
+}
+
+/* SECTION GRID */
+.container {
+    width: 100%;
+    height: 100%;
+
+    display: grid;
+    grid-template-columns: auto 80%;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:         
+        "a b"
+        "c d"
+        "e e";
+    position: relative;
+}
+
+.item-a {
+    grid-area: a;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: #00a19a; 
+}
+
+.item-b {
+    grid-area: b;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: #d7d7d7;
+}
+
+.item-c {
+    grid-area: c;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: #00a19a; 
+}
+
+.item-d {
+    grid-area: d;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: #fff;
+}
+
+.item-e {
+    grid-area: e;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: #006964;
+}
+/* END SECTION GRID */
+
+/************** SECTION STYLES **************/
+
+/* SECTION A*/
+.a-content {
+    display: grid;
+    justify-content: center;
+    align-items: center;      
+
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+.item-a img{
+    width: 210px;
+    height: 210px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+}
+/* END SECTION A*/
+
+/* SECTION B*/
+.b-content {
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
+.b-content h1 {
+    color: #1d1d1b;
+
+    font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", "sans serif";
+    padding-bottom: 5px;
+}
+
+.b-text-area {
+    padding-top: 20px;
+
+    width: 80%;
+    height: 100%;
+}
+/* END SECTION B*/
+
+/* SECTION C */
+.c-alination {    
+    display: grid;
+    justify-content: center;
+
+    grid-template-columns: 70%;
+
+    padding-bottom: 20px;
+}
+
+.c-datos {
+    color: #fff;
+}
+
+.c-datos h2 {
+    color: #f6d75e;
+
+    padding-top: 8px;    
+}
+
+.c-datos h3 {
+    padding-top: 8px;
+}
+/* END SECTION C */
+
+/* SECTION D */
+.item-d {
+    padding-left: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.d-info h1{
+    font-size: 24px;
+}
+
+.d-data {
+    display: flex;
+    align-items: center;
+}
+
+.d-data p{
+    margin-left: 5px;
+    font-size: 12px;
+}
+
+.hobbie {
+    width: 65%;
+}
+
+/* END SECTION D */
+
+/* SECTION E*/ 
+.item-e {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+/* END SECTION E*/
+
+/* ICONS */
+.s-star {
+    display: flex;
+    align-items: center;        
+}
+.s-star img {
+    height: 13px;
+    width: 13px;
+}
+.sf-star {
+    margin-left: 5px;
+} 
+
+.p-point {
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.p-packet {
+    display: flex;
+    align-items: center;
+
+    color: #00a19a;
+}
+.p-point img {
+    height: 12px;
+    width: 12px;
+
+    margin-right: 5px;
+}
+
+.f-icons {
+    display: flex;
+    align-items: center;
+
+    padding-top: 4px;
+}
+.f-icons img {
+    height: 22px;
+    width: 22px;
+
+    margin-right: 4px;
+    margin-left: 4px;
+}
+.f-container p {
+    color: #1d1d1b;
+
+    font-size: 12px;
+    font-weight: 700;
+}
+/* END ICONS*/
+
+/* DECORATION */
+.decoration {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    padding-top: 5px; 
+}
+
+.decoration::before {
+    content: '';
+
+    width: 20px;
+    height: 19px;
+
+    border: #fff 2px solid;
+    border-radius: 3px;
+}
+
+.decoration::after {
+    content: '';
+
+    width: 100%;
+    height: 2px;
+
+    padding-left: 2px;
+
+    background-color: #fff;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 800px) {
+    .container {
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto auto auto 10%;
+        grid-template-areas:         
+        "a a"
+        "c c"
+        "b b"
+        "d d"
+        "e e";
+    }
+
+    .item-b {
+        padding-bottom: 20px;
+    }
+}
+
